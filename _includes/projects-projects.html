@@ -1,0 +1,117 @@
+<section class="bg-[#e6f4fa]">
+
+  <div class="relative w-full h-[320px] overflow-hidden">
+    <img src="../images/about/blue_bg.webp" alt="Empowering Sri Lanka" class="w-full h-full object-cover">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+      <h1 class="text-2xl md:text-3xl font-bold text-white font-[Poppins] drop-shadow-lg">
+        PROJECTS
+      </h1>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+<section class="bg-[#e6f4fa] py-10">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <!-- Header -->
+    <div class="mb-6">
+      <h2 class="text-3xl font-bold text-[#22223b] mb-2">Our Projects</h2>
+      <p class="text-[#3d5a80] max-w-xl">Driving Innovation and Engineering Solutions for a Sustainable Future with Global Impact, Transforming Challenges into Opportunities for All.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+<div class="flex gap-3 my-6">
+  <button class="filter-btn font-semibold py-2 px-6 rounded-lg shadow bg-blue-600 text-white" data-filter="all">All</button>
+  <button class="filter-btn font-semibold py-2 px-6 rounded-lg shadow bg-white text-blue-700" data-filter="technology">Technology</button>
+</div>
+
+
+    <hr class="border-t border-gray-300 mb-6" />
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Project Card -->
+      <div class="project-card bg-white rounded-xl shadow p-6 border border-gray-200" data-category="technology">
+        <div class="w-[150px] mb-2">
+          <img src="../images/projects/sahana_logo.webp" alt="Sahana Foundation Banner" class="rounded-md">
+        </div>
+        <p class="text-blue-700 text-sm font-semibold">2025–Present</p>
+        <h3 class="text-lg font-bold text-[#22223b] mb-2">LSF Silver Email Platform</h3>
+        <p class="text-[#415a77] text-base leading-relaxed mb-3">
+          A robust, scalable email solution for governments requiring secure communications, with full control and customization features, built with Python and Kubernetes for high reliability.
+        </p>
+        <img src="../images/projects/languages_icons.webp" alt="Tech Stack" class="w-[90px] h-[40px] rounded-md border p-1 bg-gray-100">
+      </div>
+
+      <!-- Project Card Duplicate -->
+      <div class="project-card bg-white rounded-xl shadow p-6 border border-gray-200" data-category="technology">
+        <div class="w-[150px] mb-2">
+          <img src="../images/projects/sahana_logo.webp" alt="Sahana Foundation Banner" class="rounded-md">
+        </div>
+        <p class="text-blue-700 text-sm font-semibold">2025–Present</p>
+        <h3 class="text-lg font-bold text-[#22223b] mb-2">LSF Silver Email Platform</h3>
+        <p class="text-[#415a77] text-base leading-relaxed mb-3">
+          A robust, scalable email solution for governments requiring secure communications, with full control and customization features, built with Python and Kubernetes for high reliability.
+        </p>
+        <img src="../images/projects/languages_icons.webp" alt="Tech Stack" class="w-[90px] h-[40px] rounded-md border p-1 bg-gray-100">
+      </div>
+
+      <!-- Project Card Duplicate -->
+      <div class="project-card bg-white rounded-xl shadow p-6 border border-gray-200" data-category="technology">
+        <div class="w-[150px] mb-2">
+          <img src="../images/projects/sahana_logo.webp" alt="Sahana Foundation Banner" class="rounded-md">
+        </div>
+        <p class="text-blue-700 text-sm font-semibold">2025–Present</p>
+        <h3 class="text-lg font-bold text-[#22223b] mb-2">LSF Silver Email Platform</h3>
+        <p class="text-[#415a77] text-base leading-relaxed mb-3">
+          A robust, scalable email solution for governments requiring secure communications, with full control and customization features, built with Python and Kubernetes for high reliability.
+        </p>
+        <img src="../images/projects/languages_icons.webp" alt="Tech Stack" class="w-[90px] h-[40px] rounded-md border p-1 bg-gray-100">
+      </div>
+
+      <!-- Non-Technology Card -->
+      <div class="project-card bg-white rounded-xl shadow p-6 border border-gray-200" data-category="other">
+        <div class="w-[150px] mb-2">
+          <img src="../images/projects/sahana_logo.webp" alt="Community Outreach Banner" class="rounded-md">
+        </div>
+        <p class="text-blue-700 text-sm font-semibold">2024–Present</p>
+        <h3 class="text-lg font-bold text-[#22223b] mb-2">Community Outreach Program</h3>
+        <p class="text-[#415a77] text-base leading-relaxed mb-3">
+          A community-based initiative focused on education and social development, providing resources and support to underserved communities across various regions.
+        </p>
+        <img src="../images/projects/languages_icons.webp" alt="Tech Stack" class="w-[90px] h-[40px] rounded-md border p-1 bg-gray-100">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- JavaScript to handle filtering -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".project-card");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        // Filter cards
+        cards.forEach(card => {
+          const category = card.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+
+        // Update button styles
+        buttons.forEach(btn => {
+          btn.classList.remove("bg-blue-600", "text-white");
+          btn.classList.add("bg-white", "text-blue-700");
+        });
+
+        button.classList.remove("bg-white", "text-blue-700");
+        button.classList.add("bg-blue-600", "text-white");
+      });
+    });
+  });
+</script>
